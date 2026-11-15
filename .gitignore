@@ -1,50 +1,65 @@
-# History files
+
+# ==========================================
+# Vehicle Loan Analytics Using R
+# Git Ignore Configuration
+# ==========================================
+
+# R History and Session Data
 .Rhistory
 .Rapp.history
-
-# Session Data files
 .RData
 .RDataTmp
-
-# User-specific files
 .Ruserdata
 
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
+# RStudio Configuration
 .Rproj.user/
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
+# R Build Files
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
 
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
+# Environment and Credentials
 .Renviron
 .env
+.env.*
+!.env.example
+.httr-oauth
 
-# pkgdown site
-docs/
+# R Markdown and Quarto Cache
+*_cache/
+/cache/
+*.utf8.md
+*.knit.md
+.quarto/
 
-# translation temp files
+# Generated Data
+data/processed/*
+data/exceptions/*
+
+# Generated Reports and Outputs
+outputs/*
+reports/*.html
+reports/*.pdf
+
+# Logs
+logs/*
+
+# Preserve Empty Directories
+!data/processed/.gitkeep
+!data/exceptions/.gitkeep
+!outputs/.gitkeep
+!logs/.gitkeep
+
+# Temporary Files
+*.tmp
+*.log
+*~
+.DS_Store
+Thumbs.db
+
+# Translation Temporary Files
 po/*~
 
-# RStudio Connect folder
+# RStudio Connect
 rsconnect/
